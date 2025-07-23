@@ -1,0 +1,47 @@
+div.rating-cancel,div.star-rating{float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden}
+div.rating-cancel,div.rating-cancel a{background:url(images/delete.gif) no-repeat 0 -16px}
+div.star-rating,div.star-rating a{background:url(images/star.gif) no-repeat 0 0px}
+div.rating-cancel a,div.star-rating a{display:block;width:16px;height:100%;background-position:0 0px;border:0}
+div.star-rating-on a{background-position:0 -16px!important}
+div.star-rating-hover a{background-position:0 -32px}
+div.star-rating-readonly a{cursor:default !important}
+div.star-rating{background:transparent!important; overflow:hidden!important}
+
+/* DARK MODE START */
+body.dark-mode, html.dark-mode {
+    background: #181818 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode .box,
+body.dark-mode .container,
+body.dark-mode .content,
+body.dark-mode .main,
+body.dark-mode .section {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode table, 
+body.dark-mode th, 
+body.dark-mode td {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+body.dark-mode a {
+    color: #4CAF50 !important;
+}
+/* DARK MODE END */
+
+/* FONT SIZE START */
+body.font-small, html.font-small {
+    font-size: 12px !important;
+}
+body.font-medium, html.font-medium {
+    font-size: 16px !important;
+}
+body.font-large, html.font-large {
+    font-size: 20px !important;
+}
+/* FONT SIZE END */

@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: #adc49d;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    background: #72a76d;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    display: block;
+  }
+  
+  .nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .nav-item {
+    margin: 5px 0;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    transition: background 0.3s, border-left 0.3s, box-shadow 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #e8f5e9;
+}
+  
+  .nav-item.active .nav-link {
+    background-color: #e3f2fd;
+    border-left: 5px solid #388e3c;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(67, 160, 71, 0.08);
+    position: relative;
+}
+
+.nav-item.active .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 5px;
+    background: linear-gradient(180deg, #43a047 0%, #388e3c 100%);
+    border-radius: 4px;
+    transition: background 0.3s, height 0.3s;
+}
+  
+  .settings {
+    padding: 10px;
+    background: #f1f1f1;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .settings i {
+    margin-right: 5px;
+  }
+  
+  /* Main */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .statistics {
+    flex: 2.5;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 60%;
+  }
+  
+  .statistics h2 {
+    margin-bottom: 15px;
+  }
+  
+  /* Updated legend style */
+  .legend-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 40px;
+    font-size: 14px;
+    color: #2e7d32;
+    padding-left: 15px;
+  }
+  
+  .summary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+  }
+  
+  .residents-box, .programs-box, .success-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  
+  .residents-box .total {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .increase {
+    color: green;
+  }
+  
+  .programs-box .program-card {
+    background: #e1f5fe;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .success-box {
+    background: #f1f8e9;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 992px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+  
+    .main {
+      flex-direction: column;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .nav-link {
+      font-size: 12px;
+    }
+  
+    .statistics, .summary {
+      min-width: 100%;
+    }
+  
+    .legend-grid {
+      font-size: 11px;
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+/* DARK MODE START */
+body.dark-mode, html.dark-mode {
+    background: #181818 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode .box,
+body.dark-mode .container,
+body.dark-mode .content,
+body.dark-mode .main,
+body.dark-mode .section {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode table, 
+body.dark-mode th, 
+body.dark-mode td {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+body.dark-mode a {
+    color: #4CAF50 !important;
+}
+/* DARK MODE END */
+
+/* FONT SIZE START */
+body.font-small, html.font-small {
+    font-size: 15px !important;
+}
+body.font-medium, html.font-medium {
+    font-size: 20px !important;
+}
+body.font-large, html.font-large {
+    font-size: 25px !important;
+}
+/* FONT SIZE END */

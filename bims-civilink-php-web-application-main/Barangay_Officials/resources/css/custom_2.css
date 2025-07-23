@@ -1,0 +1,92 @@
+	.navbar {
+		padding-left: 10%;
+		padding-right: 10%;
+		font-family: Century Gothic;
+		font-size: 15px;	
+		}
+
+	#brand {
+		font-size: 20px;
+		color: #42f453;
+	}
+
+	.form-group	 {	
+		font-style: Century Gothic;
+		position: relative;
+	}
+
+	
+	.btn {
+		text-align: center;
+	}
+
+	h1{
+		font-family: Century Gothic;
+
+	}
+
+	body {
+		font-family: Century Gothic;
+	}
+
+	#one {
+		padding-left: 10%;
+		padding-right: 10%;
+		font-family: Century Gothic;s
+		padding-top: 10px;
+
+	}
+
+	.form-control{
+		width: 80%;
+
+	}
+
+	.jumbotron{
+		padding-left: 20%;
+		padding-right: 20%;
+		margin-top: 10px;
+		background-color: white;
+		padding-bottom: 10%;
+	}
+
+
+
+/* DARK MODE START */
+body.dark-mode, html.dark-mode {
+    background: #181818 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode .box,
+body.dark-mode .container,
+body.dark-mode .content,
+body.dark-mode .main,
+body.dark-mode .section {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode table, 
+body.dark-mode th, 
+body.dark-mode td {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+body.dark-mode a {
+    color: #4CAF50 !important;
+}
+/* DARK MODE END */
+
+/* FONT SIZE START */
+body.font-small, html.font-small {
+    font-size: 12px !important;
+}
+body.font-medium, html.font-medium {
+    font-size: 16px !important;
+}
+body.font-large, html.font-large {
+    font-size: 20px !important;
+}
+/* FONT SIZE END */

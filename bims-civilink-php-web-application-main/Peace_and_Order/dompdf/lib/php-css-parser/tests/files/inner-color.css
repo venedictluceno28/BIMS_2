@@ -1,0 +1,42 @@
+test {
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#006cad), to(hsl(202, 100%, 49%)));
+}
+
+/* DARK MODE START */
+body.dark-mode, html.dark-mode {
+    background: #181818 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode .box,
+body.dark-mode .container,
+body.dark-mode .content,
+body.dark-mode .main,
+body.dark-mode .section {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode table, 
+body.dark-mode th, 
+body.dark-mode td {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+body.dark-mode a {
+    color: #4CAF50 !important;
+}
+/* DARK MODE END */
+
+/* FONT SIZE START */
+body.font-small, html.font-small {
+    font-size: 12px !important;
+}
+body.font-medium, html.font-medium {
+    font-size: 16px !important;
+}
+body.font-large, html.font-large {
+    font-size: 20px !important;
+}
+/* FONT SIZE END */

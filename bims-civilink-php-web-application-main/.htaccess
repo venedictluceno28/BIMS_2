@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect all lowercase versions to their actual file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ ${lower:$1} [L]

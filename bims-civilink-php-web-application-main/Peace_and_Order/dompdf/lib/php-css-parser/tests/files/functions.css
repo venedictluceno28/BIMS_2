@@ -1,0 +1,61 @@
+div.main { background-image: linear-gradient(#000, #fff) }
+.collapser::before,
+.collapser::-moz-before,
+.collapser::-webkit-before {
+    content: "»";
+    font-size: 1.2em;
+    margin-right: .2em;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: .2s;
+    -moz-transform-origin: center 60%;
+}
+.collapser.expanded::before,
+.collapser.expanded::-moz-before,
+.collapser.expanded::-webkit-before { -moz-transform: rotate(90deg) }
+.collapser + * {
+    height: 0;
+    overflow: hidden;
+    -moz-transition-property: height;
+    -moz-transition-duration: .3s;
+}
+.collapser.expanded + * { height: auto }
+
+
+/* DARK MODE START */
+body.dark-mode, html.dark-mode {
+    background: #181818 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode .box,
+body.dark-mode .container,
+body.dark-mode .content,
+body.dark-mode .main,
+body.dark-mode .section {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode table, 
+body.dark-mode th, 
+body.dark-mode td {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+body.dark-mode a {
+    color: #4CAF50 !important;
+}
+/* DARK MODE END */
+
+/* FONT SIZE START */
+body.font-small, html.font-small {
+    font-size: 12px !important;
+}
+body.font-medium, html.font-medium {
+    font-size: 16px !important;
+}
+body.font-large, html.font-large {
+    font-size: 20px !important;
+}
+/* FONT SIZE END */

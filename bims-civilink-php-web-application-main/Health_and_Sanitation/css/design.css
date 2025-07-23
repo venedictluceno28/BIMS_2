@@ -1,0 +1,216 @@
+body {
+    font-family: calibri;
+    margin: 0; 
+    padding: 0;
+}
+
+.label {
+    background-color: #4CAF50;
+    width: 100%;
+    height: auto;
+    padding: 3px;
+    color: white;
+    top: 0;
+}
+
+.nav {
+    background-color: #4CAF50;
+    margin: 1% 1% 0 1%;
+    border: none;
+    width: 98%;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: calibri;   
+}
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav a:hover {
+    background: #194d6b;
+    color: white;
+}
+
+.container,
+.left,
+.right,
+.down {
+    background-color: white;
+    border: 1px solid #444;
+    overflow: hidden;
+    height: auto;
+    font-family: calibri;
+}
+.container {
+    width: 97%;
+    margin: 1%;
+}
+.left, .right {
+    width: 47%;
+    margin-top: 1%;
+}
+.left { margin-left: 1%; float: left; }
+.right { margin-right: 1%; float: right; }
+.down {
+    width: 98%;
+    margin: 1% 1% 2% 1%;
+    float: right;
+}
+
+.banner {
+    height: 30px;
+    padding: 8px 0;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background: #14aa6c;
+    border: 1px solid #14aa6c;
+    font-family: calibri;
+}
+
+input[type=text],
+input[type=datetime-local],
+input[type=number],
+input[type=date],
+input[type=password] {
+    text-align: left;
+    padding: 12px 6px;
+    color: #444;
+    background-color: #dddddd;
+    margin: 5px;
+    font-family: calibri;
+    border: 1px solid #2a992c;
+}
+input[type=password] { width: 50%; }
+
+input:focus {
+    cursor: pointer;
+    background-color: white;
+    border-color: #14aa6c;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;   
+    width: 20%;
+    height: 45px;
+    margin: 5% 1% 0 1%;
+    border-radius: 7px;
+    transition: background-color 0.5s ease-in-out;
+}
+input[type=submit]:hover {
+    background-color: #156fa3;
+}
+
+table {
+    margin: 1em 0 3em 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+table tr th {
+    background: #4CAF50;
+    color: white;
+    padding: 0.75em 0.5em;
+    text-align: left;
+}
+table tr td {
+    background: #FFF;
+    color: #47433F;
+    border-top: 1px solid #EEE;
+    padding: 0.75em 0.5em;
+}
+
+/* DARK MODE START */
+body.dark-mode, html.dark-mode {
+    background: #181818 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .container,
+body.dark-mode .left,
+body.dark-mode .right,
+body.dark-mode .down,
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode .box,
+body.dark-mode .content,
+body.dark-mode .main,
+body.dark-mode .section {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .banner,
+body.dark-mode .label,
+body.dark-mode .nav {
+    background-color: #2e7d57 !important; /* darker green */
+    color: #e0e0e0 !important;
+    border-color: #2e7d57 !important;
+}
+
+body.dark-mode .nav a {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .nav a:hover {
+    background: #333 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode table {
+    background: #2c2c2c !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode table tr th {
+    background: #3a3a3a !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode table tr td {
+    background: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    border-top: 1px solid #444 !important;
+}
+
+body.dark-mode input[type=text],
+body.dark-mode input[type=datetime-local],
+body.dark-mode input[type=number],
+body.dark-mode input[type=date],
+body.dark-mode input[type=password] {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+    border-color: #4CAF50 !important;
+}
+body.dark-mode input:focus {
+    background-color: #444 !important;
+    border-color: #66bb6a !important;
+}
+body.dark-mode input[type=submit] {
+    background-color: #388e3c !important;
+}
+body.dark-mode input[type=submit]:hover {
+    background-color: #1b5e20 !important;
+}
+/* DARK MODE END */
+
+/* FONT SIZE START */
+body.font-small, html.font-small {
+    font-size: 12px !important;
+}
+body.font-medium, html.font-medium {
+    font-size: 16px !important;
+}
+body.font-large, html.font-large {
+    font-size: 20px !important;
+}
+/* FONT SIZE END */
+
+.form-control:focus, .form-select:focus {
+box-shadow: none !important;
+}

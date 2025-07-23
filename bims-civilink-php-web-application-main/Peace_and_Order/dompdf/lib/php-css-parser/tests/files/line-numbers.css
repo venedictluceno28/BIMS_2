@@ -1,0 +1,72 @@
+@charset "utf-8"; /* line 1 */
+
+@namespace "http://toto.example.org"; /* line 3 */
+
+@font-face { /* line 5 */
+    font-family: "CrassRoots";
+    src: url("http://example.com/media/cr.ttf") /* line 7 */
+}
+
+
+#header { /* line 11 */
+    margin: 10px 2em 1cm 2%;
+    font-family: Verdana, Helvetica, "Gill Sans", sans-serif;
+    color: red !important;
+}
+
+@keyframes mymove {    /* line 17 */
+    from { top: 0px; } /* line 18 */
+
+    to { top: 200px; } /* line 20 */
+}
+
+@IMPORT uRL(test.css); /* line 23 */
+
+body {
+    background: #FFFFFF url("http://somesite.com/images/someimage.gif") repeat top center; /* line 25 */
+    color: rgb(   /* line 27 */
+            233,  /* line 28 */
+            100,  /* line 29 */
+            450   /* line 30 */
+    );
+}
+
+
+/* DARK MODE START */
+body.dark-mode, html.dark-mode {
+    background: #181818 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode .box,
+body.dark-mode .container,
+body.dark-mode .content,
+body.dark-mode .main,
+body.dark-mode .section {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode table, 
+body.dark-mode th, 
+body.dark-mode td {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+body.dark-mode a {
+    color: #4CAF50 !important;
+}
+/* DARK MODE END */
+
+/* FONT SIZE START */
+body.font-small, html.font-small {
+    font-size: 12px !important;
+}
+body.font-medium, html.font-medium {
+    font-size: 16px !important;
+}
+body.font-large, html.font-large {
+    font-size: 20px !important;
+}
+/* FONT SIZE END */

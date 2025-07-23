@@ -1,0 +1,40 @@
+:root {--base-color-primary:216,98%;--base-l-primary:52%;--color-primary-text:#f8f9fa;--color-primary-link:#C7CDD0;--base-color-light:210,16%;--base-l-light:98%;--color-light-text:#212529;--color-light-link:#374048;--base-color-dark:210,11%;--base-l-dark:15%;--color-dark-text:#f8f9fa;--color-dark-link:#C7CDD0;--color-header-text: var(--color-dark-text);--color-header: var(--color-dark-lighter);}
+
+/* DARK MODE START */
+body.dark-mode, html.dark-mode {
+    background: #181818 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode .box,
+body.dark-mode .container,
+body.dark-mode .content,
+body.dark-mode .main,
+body.dark-mode .section {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode table, 
+body.dark-mode th, 
+body.dark-mode td {
+    background: #232323 !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+body.dark-mode a {
+    color: #4CAF50 !important;
+}
+/* DARK MODE END */
+
+/* FONT SIZE START */
+body.font-small, html.font-small {
+    font-size: 12px !important;
+}
+body.font-medium, html.font-medium {
+    font-size: 16px !important;
+}
+body.font-large, html.font-large {
+    font-size: 20px !important;
+}
+/* FONT SIZE END */
