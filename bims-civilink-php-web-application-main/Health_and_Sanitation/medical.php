@@ -315,13 +315,15 @@ echo '
         </div>
         <div class="modal-body">
           <input type="hidden" name="id" value="'.$id.'">
-          <div class="row g-2">
-            <div class="col-md-6 mb-2">
-              <label class="form-label">Select Resident</label>
-              <select name="resident_id" class="form-select" required>
-                '.$residentDropdown.'
-              </select>
-            </div>
+             <div class="row g-2">
+               <div class="col-md-6 mb-2">
+                 <label class="form-label">Search Resident</label>
+                 <input list="residents" name="resident_id" class="form-control" required>
+                 <datalist id="residents">
+                  <?php echo $residentDropdown; ?>
+                </datalist>
+              </div>
+              </div>
 
             '.generateTagInput("past_illnesses", "Past Illnesses", $row['past_illnesses']).'
             '.generateTagInput("allergies", "Allergies", $row['allergies']).'
@@ -383,13 +385,25 @@ echo '
             <div class="modal-body">
               <div class="row g-2">
             <div class="col-md-6 mb-2">
-  <label class="form-label">Select Resident</label>
-  <select name="resident_id" class="form-select" required>
-    <option value="">-- Select Resident --</option>
-    <?php foreach ($residentOptions as $res): ?>
-      <option value="<?= $res['id'] ?>"><?= htmlspecialchars($res['name']) ?></option>
-    <?php endforeach; ?>
-  </select>
+
+   <!-- Searchable Resident Field -->
+   <div class="col-md-6 position-relative mb-2">
+    <label class="form-label">Search Resident</label>
+    <input
+       type="text"
+       id="resident-search-<?= $id ?? 'add' ?>"
+       class="form-control resident-search"
+       placeholder="Type Resident Name"
+       autocomplete="off"
+       required
+    >
+    <input type="hidden" name="resident_id" id="resident-id-<?= $id ?? 'add' ?>">
+    <div
+      id="resident-suggestions-<?= $id ?? 'add' ?>"
+      class="list-group position-absolute w-100"
+      style="z-index:1000;"
+    ></div>
+   </div>
 </div>
 
                 <div class="col-md-6 mb-2"><label class="form-label">Past Illnesses</label><textarea name="past_illnesses" class="form-control" rows="2" placeholder="Past Illnesses"></textarea></div>
@@ -411,6 +425,48 @@ echo '
         </div>
       </div>
     </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.resident-search').forEach(input => {
+    const suffix = input.id.split('-').pop();       // e.g. 'add' o record ID
+    const hidden = document.getElementById(`resident-id-${suffix}`);
+    const box    = document.getElementById(`resident-suggestions-${suffix}`);
+    let debounce;
+
+    input.addEventListener('input', () => {
+      clearTimeout(debounce);
+      hidden.value = '';
+      box.innerHTML = '';
+      const term = input.value.trim();
+      if (term.length < 2) return;
+      debounce = setTimeout(() => {
+        fetch(`medical.php?q=${encodeURIComponent(term)}`)
+          .then(r => r.json())
+          .then(list => {
+            box.innerHTML = list.map(item =>
+              `<button type="button" class="list-group-item list-group-item-action" data-id="${item.id}">${item.name}</button>`
+            ).join('');
+          });
+      }, 250);
+    });
+
+    box.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-id]');
+      if (!btn) return;
+      input.value  = btn.textContent;
+      hidden.value = btn.dataset.id;
+      box.innerHTML = '';
+    });
+
+    document.addEventListener('click', e => {
+      if (!input.contains(e.target) && !box.contains(e.target)) {
+        box.innerHTML = '';
+      }
+    });
+  });
+});
+</script>
 </body>
 
 </html>
