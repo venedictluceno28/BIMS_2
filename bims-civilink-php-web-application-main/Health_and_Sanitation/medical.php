@@ -123,10 +123,11 @@ while ($r = mysqli_fetch_assoc($residentQuery)) {
 <body>
 <?php require_once 'sidebar.php'; ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
 
 <div class="container mt-4">
-    <h2 class="mb-4">Medical History & Logs</h2>
+    <h2 class="mb-4">Medical History &amp; Logs</h2>
     <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModal">New</button>
 
     <div class="table-responsive">
