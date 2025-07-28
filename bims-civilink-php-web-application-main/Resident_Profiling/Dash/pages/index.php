@@ -109,7 +109,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <style>
         body, html {
-            background: linear-gradient(to right, #03AF34 0%, #FFF84A 100%) !important;
+            background: #A0C49D !important;
         }
     </style>
 </head>
@@ -118,7 +118,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <center><h3 class="page-header " style="color: white;">STATISTICS</h3></center>
+            <center><h3 class="page-header " style="color: white;">Admin Dashboard</h3></center>
         </div>
     </div>
 
